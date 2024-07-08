@@ -2,29 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManeger : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public float thoiGianChoPhepVeDich = 30f;
     public bool ketThucGame = false;
     public bool winGame = false;
-    private static GameManeger instance;
+    private static GameManager instance;
     public GameObject gameOverOfject;
     public GameObject timeGame;
     [SerializeField]
     private float thoiGianCongThem = 31f;
     public GameObject winGameObject;
 
-    public static GameManeger Instance
+    public static GameManager Instance
     {
         get
         {
             if (instance == null)
             {
-                instance = FindObjectOfType<GameManeger>();
+                instance = FindObjectOfType<GameManager>();
                 if (instance == null)
                 {
                     GameObject gameManagerGameObject = new GameObject("GameManager");
-                    instance = gameManagerGameObject.AddComponent<GameManeger>();
+                    instance = gameManagerGameObject.AddComponent<GameManager>();
                 }
             }
             return instance;

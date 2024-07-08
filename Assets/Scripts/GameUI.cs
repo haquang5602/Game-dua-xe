@@ -13,7 +13,7 @@ public class GameUI : MonoBehaviour
     }
     public void HienThiThoiGian()
     {
-        timeText.SetText(Mathf.FloorToInt(GameManeger.Instance.thoiGianChoPhepVeDich).ToString());
+        timeText.SetText(Mathf.FloorToInt(GameManager.Instance.thoiGianChoPhepVeDich).ToString());
     }
     public void ChoiLai()
     {
